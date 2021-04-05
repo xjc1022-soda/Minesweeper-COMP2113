@@ -2,7 +2,7 @@
 #include "instruction.h"
 #include "map.h"
 #include<cstdlib>
-#inlcude<ctime>
+#include<ctime>
 #include "printmap.h"
 
 using namesapce std;
