@@ -31,6 +31,6 @@ int main(){
    int initial_pos=rand()%10;
    Position start={initial_pos, 0};
    
-   printmap(map, heal_pack, start);
+   printmap(map, heal_pack, currentpos);
    
 }
