@@ -6,5 +6,8 @@
 
 using namesapce std;
 
+struct position {
+   int x;
+   int y;};
 int main(){
 }
