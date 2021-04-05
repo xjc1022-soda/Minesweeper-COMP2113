@@ -1,13 +1,14 @@
 //read instruction file input
 #include<iostream>
+#include "instruction.h"
 #include<fstream>
 using namespace std;
 
-void showinstruction(string filename){
+void showinstruction(){
    ifstream fin;
-   fin.open(filename);
+   fin.open("instruction.txt");
    if ( fin.fail() ) {
-      cout << "Error in file opening!" 				<< endl;
+      cout << "Error in file opening!" << endl;
       exit(1);
    }
    string x;
