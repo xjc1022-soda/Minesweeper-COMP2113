@@ -1,6 +1,6 @@
 //instruction.h
-#ifndef SHOWINSTRUCTION_H
-#define SHOWINSTRUCTION_H
+#ifndef INSTRUCTION_H
+#define INSTRUCTION_H
 void showinstruction(string filename);
 
 
