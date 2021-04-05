@@ -9,7 +9,8 @@ using namesapce std;
 
 struct Position {
    int x;
-   int y;};
+   int y;
+};
 
 int main(){
    showinstruction(instruction.txt);
@@ -19,15 +20,21 @@ int main(){
    mapContainer(map, number);
    
    if (number == 1){
-     Position heal_pack={1,7};}
+     Position heal_pack={1,7};
+   }
    else if (number == 2){
-     Postion heal_pack={3,5};}
+     Postion heal_pack={3,5};
+   }
    else if (number == 3){
-     Postion heal_pack={6,5};}
+     Postion heal_pack={6,5};
+   }
    else if (number == 4){
-     Postion heal_pack={5,4};}   
+     Postion heal_pack={5,4};
+   }   
    else if (number == 5){
-     Postion heal_pack={5,4};}
+     Postion heal_pack={5,4};
+   }
+   int number_of_heal_pack = 1;
    
    int initial_pos=rand()%10;
    Position start={initial_pos, 0};
@@ -69,7 +76,7 @@ int main(){
         else 
           current.y -= 1; 
       }
-      if (input == 's'){
+      else if (input == 's'){
         if (current.x == 9){
           cout << "Invalid movement!" << endl;
           continue;}
@@ -102,5 +109,22 @@ int main(){
             Position current={restart_pos, 0};
             continue;}
         }
-   
+      
+      else if ( current.x == end.x && current.y == 9){
+         cout << "Congratulation, you reach the endpoint!" << endl;
+         cout << "You win!" <<endl;
+         break;
+      }
+      else if ( current.x == heal_pack.x && current.y == heal_pack.y){
+         if (number_of_heal_pack == 0){
+            cout << "You have already picked up the heal pack." << endl;}
+         else {
+            blood += 1;
+            cout << "You get a heal pack. One blood added!" << endl;
+            number_of_heal_pack -= 1; }
+      else{ 
+         printmap(map, heal_pack, current);
+         continue;
+      }
+   }
 }
