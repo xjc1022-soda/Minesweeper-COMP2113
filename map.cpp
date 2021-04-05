@@ -1,4 +1,6 @@
 #include <iostream>
+# include "map.h"
+using namespace std;
 
 int mapContainer(int x){
   if (x==1){
