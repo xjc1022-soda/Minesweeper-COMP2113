@@ -1,8 +1,10 @@
 Welcome to the game landmine.
 You will start on the first clomn from left and aim to arrive at the destination on the last clomn on the right.
 The system will tell which point you are now staying at. You could move upward, leftward, downward or rightward by 1 step each time.
+input 'w' to move upwaeds, 's' to move downwords, 'd' to move right , 'a' to move left.(only lower character will be valid)
 You have 3 bloods.Whenever you reach the landmines, 1 blood is deducted and you will be sent back randomly to one of the points in the first row (may not be the same as the entrance mentioned above).
 The system will provide you with numbers of total landmines within 3*3 square (the current location is the centre of the square).
 The winning condition is the player could reach the exit within 30 movements, without using up all the 3 drops of blood. 
 
-special bonus: There is 1 healing pack in each map, when the player reaches that point, 1 blood is added (only available once in each round,not shown on the map)
+special bonus: There is 1 healing pack in each map, when the player reaches that point, 1 blood is added (only available once in each round)
+
