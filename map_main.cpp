@@ -11,7 +11,7 @@ struct Position {
    int x;
    int y;};
 int main(){
-   showinstruction();
+   showinstruction(instruction.txt);
    srand(time(NULL));
    int number=rand()%5+1;
    int map[10][10];
