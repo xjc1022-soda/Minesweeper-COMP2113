@@ -166,6 +166,7 @@ int main(){
          *blood-=1;
          if (*blood == 0){
             cout << "You use up all your blood" << endl << "You lose!" <<endl;
+            cout << "Your final mark is -9999!" <<endl;
             break;}
          else if (*blood > 0){
             cout << "Go back and try again!" << endl;
