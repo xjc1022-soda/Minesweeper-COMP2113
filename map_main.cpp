@@ -36,7 +36,7 @@ int main(){
    int expect_num;
    int * num_step = new int(0);
    int * mark = new int(0);
-   cout<<"Input the expected number of movement you need to reach end point:";
+   cout<<"Input the expected number of movement you need to reach end point: ";
    cin>>expect_num;
    int * num_of_tool = new int (1);
    
@@ -55,7 +55,7 @@ int main(){
             continue;
          }
          else {
-            cout << "You are now using special tool, please input your movement" <<endl;
+            cout << "You are now using special tool, please input your movement: ";
             cin >> input;
             if (input == 'w'){
                if (current.x == 0 || current.x == 1){
