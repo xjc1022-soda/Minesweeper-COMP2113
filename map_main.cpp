@@ -190,7 +190,7 @@ int main(){
          else if(*num_step>40){
          *mark -= ((*num_step)-40)*8;
          }
-         cout << "You have used " << *num_step << " to reach the endpoint." <<endl;
+         cout << "You have used " << *num_step << " movements to reach the endpoint." <<endl;
          cout<<"Your final mark is: "<<*mark<<endl;
          break;
       }
