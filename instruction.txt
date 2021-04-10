@@ -5,6 +5,7 @@ input 'w' to move upwaeds, 's' to move downwords, 'd' to move right , 'a' to mov
 You have 3 bloods.Whenever you reach the landmines, 1 blood is deducted and you will be sent back randomly to one of the points in the first row (may not be the same as the entrance mentioned above).
 The system will provide you with numbers of total landmines within 3*3 square (the current location is the centre of the square).
 The winning condition is the player could reach the exit within 30 movements, without using up all the 3 drops of blood. 
+The landmine will not dispear after you run into it.
 
 special bonus: There is 1 healing pack in each map, when the player reaches that point, 1 blood is added (only available once in each round)
 
