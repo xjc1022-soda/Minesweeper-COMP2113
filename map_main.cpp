@@ -16,26 +16,8 @@ int main(){
    int map[10][10];
    mapContainer(map, number);
    Position heal_pack;
-   if (number == 1){
-     heal_pack.x=1;
-     heal_pack.y=7;
-   }
-   else if (number == 2){
-     heal_pack.x=3;
-     heal_pack.y=5;
-   }
-   else if (number == 3){
-     heal_pack.x=6;
-     heal_pack.y=5;
-   }
-   else if (number == 4){
-     heal_pack.x=5;
-     heal_pack.y=4;
-   }
-   else if (number == 5){
-     heal_pack.x=5;
-     heal_pack.y=4;
-   }
+   heal_pack.x=5;
+   heal_pack.y=4;
    int number_of_heal_pack = 1;
 
    int initial_pos=rand()%10;
