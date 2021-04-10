@@ -26,19 +26,19 @@ int main(){
 
    printmap(map, heal_pack, current);
 
-   int out=rand()%10;
-   Position end={out,9};
+   int out = rand()%10;
+   Position end = {out,9};
 
-   int * blood= new int(3);
+   int * blood = new int(3);
 
 
    char input;
    int expect_num;
-   int * num_step= new int(0);
-   int * mark=new int(0);
+   int * num_step = new int(0);
+   int * mark = new int(0);
    cout<<"Input the expected number of movement you need to reach end point:";
    cin>>expect_num;
-   
+   int * num_of_tool = new int (1);
    while (true){
       cout<<"Your current position is: "<<current.x<<" "<<current.y<<endl;
       cout<<"Number of landmines around you: "<<map[current.x][current.y]<<endl;
@@ -46,8 +46,69 @@ int main(){
       cout<<"Please input your next action: ";
       cin>>input;
       *num_step+=1;
-
-      if (input == 'w'){
+      if (input == 'p') {
+         if ( *num_of_tool == 0 ) {
+            cout << "You have used up all the tools, you cannot use it any more!" <<endl;
+            continue;
+         }
+         else {
+            cout << "You are now using special tool, please input your movement" <<endl;
+            cin >> input;
+            if (input == 'w'){
+               if (current.x == 0 || current.x == 1){
+                  cout << "You reach the boundary, invalid movement!" << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+               else if ( map[current.x-2][current.y] == 999 ){
+                  cout << "This is a wall, you cannot reach it." << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+               else{
+                  current.x -= 2;
+                  *num_of_tool -= 1;}
+            }
+            else if (input == 'a'){
+               if (current.y == 0 || current.y == 1){
+                  cout << "You reach the boundary, invalid movement!" << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+               else if ( map[current.x][current.y-2] == 999 ){
+                  cout << "This is a wall, you cannot reach it." << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+               else{
+                  current.y -= 2;
+                  *num_of_tool -= 1;}
+            }
+            else if (input == 's'){
+               if (current.x == 9 || current.x == 8){
+                  cout << "You reach the boundary, invalid movement!" << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+               else if ( map[current.x+2][current.y] == 999 ){
+                  cout << "This is a wall, you cannot reach it." << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+               else{
+                  current.x += 2;
+                  *num_of_tool -=1;}
+            }
+            else if (input == 'd'){
+               if (current.y == 9 || current.y == 8){
+                  cout << "You reach the boundary, invalid movement!" << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+               else if ( map[current.x][current.y+2] == 999 ){
+                  cout << "This is a wall, you cannot reach it." << endl;
+                  printmap(map, heal_pack, current);
+                  continue;}
+              else{
+                 current.y += 2;
+                 *num_of_tool -= 1;}
+            }
+         }
+      }
+      else if (input == 'w'){
         if (current.x == 0){
           cout << "You reach the boundary, invalid movement!" << endl;
           printmap(map, heal_pack, current);
@@ -144,10 +205,12 @@ int main(){
          continue;
       }
    }
-      delete blood;
-      blood = 0;
-      delete mark;
-      mark = 0;
-      delete num_step;
-      num_step = 0;
+   delete blood;
+   blood = 0;
+   delete mark;
+   mark = 0;
+   delete num_step;
+   num_step = 0;
+   delete num_of_tool;
+   num_of_tool = 0;
 }
