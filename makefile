@@ -5,7 +5,7 @@ instruction.o: instruction.cpp instruction.h
 map.o: map.cpp map.h
 	g++ $(FLAGS) -c map.cpp
 printmap.o: printmap.cpp printmap.h
-	g++ $(FLAGS) -c print.cpp
+	g++ $(FLAGS) -c printmap.cpp
 map_main.o: map_main.cpp instruction.h map.h printmap.h
 	g++ $(FLAGS) -c map_main.cpp
 map_main: map_main.o instruction.o map.o printmap.o
