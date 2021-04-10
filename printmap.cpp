@@ -7,9 +7,9 @@ using namespace std;
 void printmap(int map[][10], Position heal_pack, Position current){
    for(int i=0; i<10; i++){
     for(int j=0; j<10; j++){
-        if (i==heal_pack.x && heal_pack.y==j)
+        if (i==current.x && current.y==j)
             cout<<"*"<<" ";
-        else if(i==current.x && j==current.y)
+        else if(i==heal_pack.x && j==heal_pack.y)
             cout<<"O"<<" ";
         else
             cout<<"x"<<" ";
