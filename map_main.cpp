@@ -29,16 +29,23 @@ int main(){
    int out=rand()%10;
    Position end={out,9};
 
-   int blood=3;
+   int * blood= new int(3);
 
 
    char input;
+   int expect_num;
+   int * num_step= new int(0);
+   int * mark=new int(0);
+   cout<<"Input the expected number of movement you need to reach end point:";
+   cin>>expect_num;
+   
    while (true){
       cout<<"Your current position is: "<<current.x<<" "<<current.y<<endl;
       cout<<"Number of landmines around you: "<<map[current.x][current.y]<<endl;
-      cout << "You have " << blood << " blood(s)." <<endl;
+      cout << "You have " << *blood << " blood(s)." <<endl;
       cout<<"Please input your next action: ";
       cin>>input;
+      *num_step+=1;
 
       if (input == 'w'){
         if (current.x == 0){
@@ -91,11 +98,11 @@ int main(){
 
       if ( map[current.x][current.y] == 100 ){
          cout << "You reach a landmine!" << endl;
-         blood-=1;
-         if (blood == 0){
+         *blood-=1;
+         if (*blood == 0){
             cout << "You use up all your blood" << endl << "You lose!" <<endl;
             break;}
-         else if (blood > 0){
+         else if (*blood > 0){
             cout << "Go back and try again!" << endl;
             int restart_pos=rand()%10;
             current.x = restart_pos;
@@ -107,6 +114,17 @@ int main(){
       else if ( current.x == end.x && current.y == 9){
          cout << "Congratulation, you reach the endpoint!" << endl;
          cout << "You win!" <<endl;
+         *mark += (*blood)*100;
+         if(number_of_heal_pack==0){
+         *mark += 200;}
+         *mark -= abs(expect_num-(*num_step))*8;
+         if (*num_step<=30){
+         *mark += (30-(*num_step))*20;
+         }
+         else if(*num_step>40){
+         *mark -= ((*num_step)-40)*8;
+         }
+         cout<<"Your final mark is: "<<*mark<<endl;
          break;
       }
       else if ( current.x == heal_pack.x && current.y == heal_pack.y){
@@ -115,7 +133,7 @@ int main(){
             printmap(map, heal_pack, current);
           }
          else {
-            blood += 1;
+            *blood += 1;
             cout << "You get a heal pack. One blood added!" << endl;
             number_of_heal_pack -= 1;
             printmap(map, heal_pack, current);
@@ -126,4 +144,10 @@ int main(){
          continue;
       }
    }
+      delete blood;
+      blood=0;
+      delete mark;
+      mark=0;
+      delete num_step;
+      num_step=0;
 }
