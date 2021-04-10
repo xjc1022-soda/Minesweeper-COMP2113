@@ -8,4 +8,6 @@ The winning condition is the player could reach the exit within 30 movements, wi
 The landmine will not dispear after you run into it.
 
 special bonus: There is 1 healing pack in each map, when the player reaches that point, 1 blood is added (only available once in each round)
+special tools:  when you press 'p'(lower character!) you can jump 2 steps at one time(can jump over landmine and walls)
+                if you run into wall or exceed bounary after using special tool, steps will be counted.
 
