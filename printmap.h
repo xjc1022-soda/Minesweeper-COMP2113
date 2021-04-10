@@ -5,3 +5,4 @@ struct Position{
   int y;};
 void printmap(int map[][10], Position heal_pack, Position current);
 #endif
+
