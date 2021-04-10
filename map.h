@@ -2,6 +2,6 @@
 #ifndef MAP_H
 #define MAP_H
 
-int mapContainer(int x);
+void mapContainer(int map[][10], int x);
 
 #endif
