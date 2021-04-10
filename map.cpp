@@ -2,6 +2,7 @@
 # include "map.h"
 using namespace std;
 
+// use this function to generate a random map from 5 designed maps
 void mapContainer(int map[][10], int x){
   if (x==1){
      int array[10][10]={{0  ,1  ,100,2  ,1  ,1  ,1  ,100,1  ,0  },
@@ -14,7 +15,8 @@ void mapContainer(int map[][10], int x){
                         {1  ,2  ,100,2  ,1  ,2  ,100,3  ,2  ,2  },
                         {0  ,1  ,1  ,2  ,100,2  ,2  ,3  ,100,1  },
                         {0  ,0  ,0  ,999,1  ,1  ,1  ,100,2  ,1  }};
-      for (int i=0; i<10; i++){
+    // use for loop to copy map from existing source (2D array) 
+    for (int i=0; i<10; i++){
          for (int j=0; j<10;j++){
              map[i][j]=array[i][j];
          }
