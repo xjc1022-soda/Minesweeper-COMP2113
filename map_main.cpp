@@ -145,9 +145,9 @@ int main(){
       }
    }
       delete blood;
-      blood=0;
+      blood = 0;
       delete mark;
-      mark=0;
+      mark = 0;
       delete num_step;
-      num_step=0;
+      num_step = 0;
 }
