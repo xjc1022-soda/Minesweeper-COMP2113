@@ -7,7 +7,8 @@ map.o: map.cpp map.h
 printmap.o: printmap.cpp printmap.h
 	g++ $(FLAGS) -c print.cpp
 map_main.o: map_main.cpp instruction.h map.h printmap.h
+	g++ $(FLAGS) -c map_main.cpp
+map_main: map_main.o instruction.o map.o printmap.o
 	g++ $(FLAGS) instruction.o map.o printmap.o map_main.o -o map_main
-clean:
-	rm -f map_main *.o
-.PHONY:clean
+
+
