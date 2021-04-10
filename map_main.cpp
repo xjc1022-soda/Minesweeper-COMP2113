@@ -52,6 +52,7 @@ int main(){
       if (input == 'p') {
          if ( *num_of_tool == 0 ) {
             cout << "You have used up all the tools, you cannot use it any more!" <<endl;
+            *num_step -= 1;
             continue;
          }
          else {
