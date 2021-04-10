@@ -24,7 +24,7 @@ int main(){
    Position start={initial_pos, 0};
    Position current = start;
 
-   printmap(map, heal_pack, current);
+   
 
    int out = rand()%10;
    Position end = {out,9};
@@ -39,6 +39,9 @@ int main(){
    cout<<"Input the expected number of movement you need to reach end point:";
    cin>>expect_num;
    int * num_of_tool = new int (1);
+   
+   printmap(map, heal_pack, current);
+   
    while (true){
       cout<<"Your current position is: "<<current.x<<" "<<current.y<<endl;
       cout<<"Number of landmines around you: "<<map[current.x][current.y]<<endl;
