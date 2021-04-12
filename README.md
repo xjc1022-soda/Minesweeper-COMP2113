@@ -17,9 +17,9 @@ The system will provide you with numbers of total landmines within 3*3 square (t
 
 special bonus: There is 1 healing pack in each map, when the player reaches that point, 1 blood is added (only available once in each round)
 special tools: when you press 'p'(lower character!) you can jump 2 steps at one time(can jump over landmine and walls). 
-               Note: let say your current position is (2,2) and (2,4) is a wall, and you input 'p' and then 'd', your movement is invalid because you reach a wall. However, the                  special tool will not be depleted in this case. If you want to use it again, you mus input 'p' again before your movement.  
+               Note: let say your current position is (2,2) and (2,4) is a wall, and you input 'p' and then 'd', your movement is invalid because you reach a wall. However, the                  special tool will not be depleted in this case. If you want to use it again, you must input 'p' again before your movement.  
 
-If you run into wall or exceed bounary after using special tool, steps will be counted.
+If you run into wall or exceed boundary after using special tool, steps will be counted.
                 
 The winning condition : the player could reach the exit without using up all the 3 drops of blood. 
 mark caculation: 1.each remaining blood worth 100 marks
@@ -28,7 +28,7 @@ mark caculation: 1.each remaining blood worth 100 marks
                  4.total steps more than 40 will lose marks(8 marks each movement)
                  5.estimation error will lose marks(one absolute error will result in 8 marks deduction )
 
-The landmine will not dispear after you run into it.
+The landmine will not disappear after you run into it.
 
 
 
