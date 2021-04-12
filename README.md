@@ -31,6 +31,7 @@ mark caculation: 1.each remaining blood worth 100 marks
 The landmine will not dispear after you run into it.
 
 
+
 Code requirements:
 1.Generation of random game sets or events
 --we use random number to generate the map and randomly set the beginning point and destination
@@ -42,6 +43,24 @@ Code requirements:
 --we read instruction form file instruction.txt
 5.Program codes in multiple files
 --we use many head file besides main function, including map.h, printmap.h and instruction.h
+
+
+
+
+Library used:
+#include<iostream>    --standarded input and output form
+#include<fstream>     --supprot file input and output, read instruction from "instruction.txt"
+#include<cstdlib>     --use function srand to generate random number
+                      --use fucntion abs to caculate the estimation error of steps
+#include<ctime>       --use time(NULL) as input of srand function
+  
+
+Compilation and execution instructions:
+follow the screen output instruction after each step(input)
+use makefile to execute the progarm:
+make map_main
+./map_main >sample_output.txt
+
 
 
 
