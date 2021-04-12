@@ -8,7 +8,7 @@ game instructions and rules:
 Welcome to the game landmine.
 You will start at a point on the first column from left (called entrance) and aim to arrive at the destination on the last column on the right.
 The system will tell which point you are now staying at. You could move upward, leftward, downward or rightward by 1 step each time.
-input 'w' to move upwaeds, 's' to move downwords, 'd' to move right , 'a' to move left.(only lower character will be valid)
+input 'w' to move upwards, 's' to move downwards, 'd' to move right , 'a' to move left.(only lower character will be valid)
 
 steps estimation: you need to input a number to estimate the steps you need to complete the game (if the estimation is far away from the actual number of movements you take, many marks will be deducted.)
 
@@ -34,7 +34,7 @@ The landmine will not dispear after you run into it.
 
 Code requirements:
 1.Generation of random game sets or events
---we use random number to generate the map and randomly set the beginning point and destination
+--we use random number to generate the map and randomly set the beginning point, restarting point and destination
 2.Data structures for storing game status
 --we use struct Position to store the current position of the player and store the position of heal_pack, beginning point and end point.
 3.Dynamic memory management
@@ -56,12 +56,9 @@ Library used:
   
 
 Compilation and execution instructions:
-follow the screen output instruction after each step(input)
 use makefile to execute the progarm:
-make map_main
-run it on atom
-
-
+download everything to Ubuntu, open the terminal and type: "make map_main" at the terminal, and then open "map_main.cpp" by atom, and run it on atom. 
+follow the screen output instruction after each step(input)
 
 
 © 2021 GitHub, Inc.
