@@ -31,5 +31,18 @@ mark caculation: 1.each remaining blood worth 100 marks
 The landmine will not dispear after you run into it.
 
 
+Code requirements:
+1.Generation of random game sets or events
+--we use random number to generate the map and randomly set the beginning point and destination
+2.Data structures for storing game status
+--we use struct Position to store the current position of the player and store the position of heal_pack, beginning point and end point.
+3.Dynamic memory management
+--we use dynamic memory method and pointers to store the situation of blood, tool and steps.
+4.File input/output (e.g., for loading/saving game status)
+--we read instruction form file instruction.txt
+5.Program codes in multiple files
+--we use many head file besides main function, including map.h, printmap.h and instruction.h
+
+
 
 © 2021 GitHub, Inc.
