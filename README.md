@@ -59,7 +59,7 @@ Compilation and execution instructions:
 follow the screen output instruction after each step(input)
 use makefile to execute the progarm:
 make map_main
-./map_main >sample_output.txt
+run it on atom
 
 
 
