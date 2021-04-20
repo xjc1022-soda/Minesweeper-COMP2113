@@ -1,10 +1,3 @@
-# landmine
-group project 171
-Xu Jiacheng 3035639094
-YUNG Yiu Yin 3035689336
-
-
-game instructions and rules:
 Welcome to the game landmine.
 You will start at a point on the first column from left (called entrance) and aim to arrive at the destination on the last column on the right.
 The system will tell which point you are now staying at. You could move upward, leftward, downward or rightward by 1 step each time.
@@ -30,35 +23,3 @@ mark caculation: 1.each remaining blood worth 100 marks
 
 The landmine will not disappear after you run into it.
 
-
-
-Code requirements:
-1.Generation of random game sets or events
---we use random number to generate the map and randomly set the beginning point, restarting point and destination
-2.Data structures for storing game status
---we use struct Position to store the current position of the player and store the position of heal_pack, beginning point and end point.
-3.Dynamic memory management
---we use dynamic memory method and pointers to store the situation of blood, tool and steps.
-4.File input/output (e.g., for loading/saving game status)
---we read instruction form file instruction.txt
-5.Program codes in multiple files
---we use many head file besides main function, including map.h, printmap.h and instruction.h
-
-
-
-
-Library used:
-#include<iostream>    --standarded input and output form
-#include<fstream>     --supprot file input and output, read instruction from "instruction.txt"
-#include<cstdlib>     --use function srand to generate random number
-                      --use fucntion abs to caculate the estimation error of steps
-#include<ctime>       --use time(NULL) as input of srand function
-  
-
-Compilation and execution instructions:
-use makefile to execute the progarm:
-download everything to Ubuntu, open the terminal and type: "make map_main" at the terminal, and then open "map_main.cpp" by atom, and run it on atom. 
-follow the screen output instruction after each step(input)
-
-
-© 2021 GitHub, Inc.
