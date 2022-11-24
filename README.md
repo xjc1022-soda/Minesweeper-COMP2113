@@ -7,9 +7,9 @@ Yung Yiu Yin 3035689336
 ```
 
 ## Sample output
-[1](https://github.com/xjc1022-soda/landmine/blob/main/sample_input_output_1.docx)
-[2](https://github.com/xjc1022-soda/landmine/blob/main/sample_input_output_2.docx)
-[3](https://github.com/xjc1022-soda/landmine/blob/main/sample_input_output_3.docx)
+[sample 1](https://github.com/xjc1022-soda/landmine/blob/main/sample_input_output_1.docx)  
+[sample 2](https://github.com/xjc1022-soda/landmine/blob/main/sample_input_output_2.docx)  
+[sample 3](https://github.com/xjc1022-soda/landmine/blob/main/sample_input_output_3.docx)
 
 ## Game Instructions and Rules:
 ```
